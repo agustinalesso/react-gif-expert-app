@@ -12,15 +12,13 @@ export const useFetchGifs = ( category ) => {
 
         getGifts( category )
             .then( imgs => {
-
-                console.log(imgs)
                 setState({
                     data: imgs,
                     loading: false
                 })
             })
 
-    }, [] )
+    }, [category] )
 
     return state;
 }
